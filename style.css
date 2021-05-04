@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  text-rendering: optimizeLegibility;
+  width: 1366px;
+  height: 768px;
+  padding: 63px 464px 112px;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+}
+
+.lockstore-logo {
+  width: 285px;
+  height: 44.9px;
+  margin: 0 76px 82.1px 77px;
+  object-fit: contain;
+}
+.log-in {
+  margin: 82.1px 0 0;
+  padding: 20px 77px 31px 72.5px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 6px 30px 0 rgba(159, 216, 216, 0.24);
+  background-color: #ffffff;
+}
+
+.log-in-text {
+  /* margin: 0 auto; */
+  margin-bottom: 39px;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #101010;
+}
+input[type='email'] {
+  width: 272px;
+  height: 0;
+  border: solid 1px #6f6f6f;
+  margin-top: 30.5px;
+  margin-bottom: 39.5px;
+}
+
+input[type='text'] {
+  width: 272px;
+  height: 0;
+  border: solid 1px #6f6f6f;
+  margin-top: 30px;
+}
+
+input[type='email']:active {
+  border: solid 1px blue;
+}
+
+input[type='text']:active {
+  border: solid 1px blue;
+}
+
+input[type='submit'] {
+  width: 284px;
+  height: 38px;
+  margin: 57px 0 53px 4.5px;
+  border-radius: 23px;
+  background-color: #24c6dc;
+  border: none;
+}
+
+input[value='LOG IN'] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.email,
+.password {
+  width: 47px;
+  height: 19px;
+  margin: 39px 37px 30.5px 0.5px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+}
+
+a {
+  width: 108px;
+  height: 13px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #24c6dc;
+  text-decoration: none;
+}
+
+.req-acc {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #656565;
+  margin: 15px auto;
+}
+.forgot-pass {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: normal;
+  text-align: left;
+  color: #24c6dc;
+  margin: 0 auto;
+}
