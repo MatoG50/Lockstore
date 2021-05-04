@@ -143,6 +143,10 @@ p {
   letter-spacing: normal;
   text-align: left;
 }
+.forgot-pass:hover,
+.req-one:hover {
+  color: #24c7dc9f;
+}
 
 /************
 MOBILE STYLES
