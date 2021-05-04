@@ -9,6 +9,6 @@ let loginDetails = {};
 loginButton.addEventListener('click', function () {
   loginDetails.email = loginEmail.value;
   loginDetails.password = loginPassword.value;
-});
 
-console.log(loginDetails);
+  console.log(loginDetails);
+});
