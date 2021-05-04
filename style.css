@@ -74,9 +74,12 @@ input[type='password'] {
   font-size: 18px;
 }
 input[type='password']:focus,
-input[type='text']:focus {
+input[type='text']:focus,
+input[type='password']:hover,
+input[type='text']:hover {
   border-bottom-color: #24c6dc;
 }
+
 .email,
 .password {
   width: 47px;
