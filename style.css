@@ -51,7 +51,6 @@ h2 {
   color: #101010;
 }
 
-
 input[type='text'] {
   width: 100%;
   border: none;
@@ -64,7 +63,6 @@ input[type='text'] {
   font-size: 18px;
 }
 
-
 input[type='password'] {
   width: 100%;
   margin-top: 20px;
@@ -76,30 +74,9 @@ input[type='password'] {
   font-size: 18px;
 }
 input[type='password']:focus,
-input[type='text']:focus
- {
+input[type='text']:focus {
   border-bottom-color: #24c6dc;
 }
-
-input[type='submit'] {
-  width: 100%;
-  height: 38px;
-  margin: 57px 0 53px 4.5px;
-  border-radius: 23px;
-  background-color: #24c6dc;
-  border: none;
-}
-
-input[value='LOG IN'] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: normal;
-  color: #ffffff;
-  vertical-align: middle;
-  text-align: center;
-}
-
 .email,
 .password {
   width: 47px;
@@ -115,14 +92,39 @@ input[value='LOG IN'] {
   text-align: left;
   color: #6f6f6f;
 }
+.login-btn {
+  background-color: #24c6dc;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding: 11px 113px 8px 114px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 57px;
+  margin-bottom: 53px;
+  white-space: nowrap;
+  font-weight: 500;
+  height: 38px;
+  width: 100%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.login-btn:hover {
+  background-color: #24c7dc98;
+}
 
-a {
-  width: 108px;
+.forgot-pass,
+.req-one {
+  width: 100%;
   height: 13px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  font-stretch: normal;
   font-style: normal;
   line-height: 1.46;
   letter-spacing: normal;
@@ -130,8 +132,9 @@ a {
   color: #24c6dc;
   text-decoration: none;
 }
-
-.req-acc {
+p {
+  margin-top: 15px;
+  margin-bottom: 31px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -139,25 +142,11 @@ a {
   line-height: 1.46;
   letter-spacing: normal;
   text-align: left;
-  color: #656565;
-  margin: 15px auto;
-}
-.forgot-pass {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.46;
-  letter-spacing: normal;
-  text-align: left;
-  color: #24c6dc;
-  margin: 0 auto;
 }
 
 /************
 MOBILE STYLES
 ***********/
-
 
 @media only screen and (max-width: 500px) {
   .lockstore-logo {
