@@ -9,29 +9,32 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link href="../static/style.css" rel="stylesheet" />
     <title>LockStore</title>
   </head>
   <body>
     <div class="container">
       <div class="lockstore-logo">
-        <img src="resources/LockStore Logo.svg" alt="LockStore Logo" />
+        <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
       </div>
       <div class="log-in">
         <div class="log-in-text"><h2>Log In</h2></div>
+        <p id="error-message"></p>
         <form method="post" action="#" class="login-form">
           <label for="email" class="email">Email</label><br />
           <input type="text" id="email" name="email" required /><br />
           <label for="password" class="password">Password</label><br />
           <input type="password" id="password" name="password" required /><br />
         </form>
-        <a href="#" class="login-btn" onclick="loginUser()">LOG IN</a><br />
+        <a href="#" class="login-btn" id="login-btn" onclick="loginUser()"
+          >LOG IN</a
+        ><br />
         <a href="#" class="forgot-pass">Forgot Password?</a><br />
         <p>
           Don't have an account? <a href="#" class="req-one">Request one</a>
         </p>
       </div>
-      <script src="script.js"></script>
+      <script src="../js/script.js"></script>
     </div>
   </body>
 </html>

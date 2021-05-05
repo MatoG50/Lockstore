@@ -151,6 +151,10 @@ p {
   color: #24c7dc9f;
 }
 
+#error-message {
+  display: none;
+}
+
 /************
 MOBILE STYLES
 ***********/
