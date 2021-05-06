@@ -153,11 +153,11 @@ p {
 
 #error-message {
   display: none;
-  background-color: red;
+  background-color: #ff2d67;
   color: white;
-  padding: 2px;
-  width: 50%;
-  margin: 0 auto;
+  padding: 4px 7px;
+  width: 60%;
+  margin: 0 auto 15px auto;
   text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
