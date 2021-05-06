@@ -44,6 +44,7 @@ const loginUser = function () {
         localStorage.setItem('token', data.access_token);
         loginButton.style.display = 'block';
         loader.style.display = 'none';
+        window.location.href = '../UI/dashboard.html';
       } else {
         errorMessage.style.display = 'none';
         loginButton.style.display = 'block';
