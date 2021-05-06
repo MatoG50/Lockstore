@@ -22,13 +22,26 @@
         <p id="error-message"></p>
         <form method="post" action="#" class="login-form">
           <label for="email" class="email">Email</label><br />
-          <input type="text" id="email" name="email" required /><br />
+          <input
+            type="text"
+            id="email"
+            oninput="hideError()"
+            name="email"
+            required
+          /><br />
           <label for="password" class="password">Password</label><br />
-          <input type="password" id="password" name="password" required /><br />
+          <input
+            type="password"
+            id="password"
+            oninput="hideError()"
+            name="password"
+            required
+          /><br />
         </form>
         <a href="#" class="login-btn" id="login-btn" onclick="loginUser()"
           >LOG IN</a
         ><br />
+        <div class="loader"></div>
         <a href="#" class="forgot-pass">Forgot Password?</a><br />
         <p>
           Don't have an account? <a href="#" class="req-one">Request one</a>
