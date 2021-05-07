@@ -42,8 +42,11 @@ const loginUser = function () {
       } else if (data.message === 'Log in successful!') {
         errorMessage.style.display = 'none';
         localStorage.setItem('token', data.access_token);
+        localStorage.setItem('username', data.username);
+        localStorage.setItem('role', data.role);
         loginButton.style.display = 'block';
         loader.style.display = 'none';
+        window.location.href = '../UI/dashboard.html';
       } else {
         errorMessage.style.display = 'none';
         loginButton.style.display = 'block';

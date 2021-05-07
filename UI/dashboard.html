@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link href="../static/dashboard.css" rel="stylesheet" />
@@ -14,17 +14,14 @@
   </head>
   <body>
     <div class="container">
-      
       <div class="nav-bar">
         <div class="logo">
           <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
         </div>
-        <div class="photo">
-          <img src="../resources/MGK.jpg" id="mgk" alt="user-photo" />
-        </div>
+        <div class="photo"></div>
         <div class="name">
-          <p class="user-name">Martin Githinji</p>
-          <p class="user-role">Admin</p>
+          <p class="user-name"></p>
+          <p class="user-role"></p>
         </div>
         <div class="nav">
           <ul class="main-nav">
@@ -32,24 +29,26 @@
             <li><a href="#">Employees</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Sales</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a onclick="logout()" href="#">Logout</a></li>
           </ul>
         </div>
       </div>
       <div class="main">
-        <div class="date">6th May, 2021, Thursday</></div>
+        <div class="date"></div>
         <div class="welcome-message">
-          <h2>WELCOME TO YOUR DASHBOARD, MARTIN.</h2>
-          <h3>View you company's performance through the cards below.</h3>
+          <div class="welcome-text">
+            <h2>WELCOME TO YOUR DASHBOARD, <span class="first-name"></span></h2>
+            <h3>View you company's performance through the cards below.</h3>
+          </div>
         </div>
         <div class="cards">
           <div class="card">
             <p class="card-name">Total Products</p>
-            <p class="card-number">84</p>
+            <p class="card-number" id="total-products"></p>
           </div>
           <div class="card">
             <p class="card-name">Total employees</p>
-            <p class="card-number">10</p>
+            <p class="card-number" id="total-employees"></p>
           </div>
           <div class="card">
             <p class="card-name">Sales Performance</p>
