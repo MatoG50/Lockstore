@@ -25,7 +25,7 @@
   background-color: #f0f0f0;
 }
 .main-nav {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -145,7 +145,7 @@ a:hover {
   margin: 7% auto 6% 170px;
 }
 .welcome-text {
-  margin-left: 37px;
+  margin-left: 77px;
 }
 h2 {
   margin-top: 15%;
