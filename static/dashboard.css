@@ -9,7 +9,6 @@
   background-color: #f7f7f7;
   min-height: 100vh;
   width: 100%;
-  background: rgba(255, 255, 0, 0.596);
   display: grid;
   grid-template-columns: 20% 80%;
 }
@@ -283,21 +282,18 @@ h3 {
     display: block;
     box-shadow: 0 3px 10px 0 rgba(36, 198, 220, 0.2);
     background-color: #ffffff;
-    grid-row: 1/3;
   }
   .container {
-    grid-template-rows: 1% 99%px;
+    overflow: auto;
   }
   .nav-bar {
     grid-row: 2/2;
     display: none;
   }
-  .main {
-    grid-row: 2/2;
-  }
   .container {
     grid-template-columns: 0 100%;
     margin: 0 auto;
+    min-height: 100vh;
   }
   .cards {
     display: flex;
@@ -305,8 +301,8 @@ h3 {
     justify-content: center;
   }
   .card {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     margin-bottom: 5%;
   }
