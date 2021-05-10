@@ -90,19 +90,18 @@ if (!token) {
   }
 }
 
+/* width of the sidebar*/
+function openNav() {
+  document.getElementById('mySidepanel').style.width = '250px';
+}
+
+function closeNav() {
+  document.getElementById('mySidepanel').style.width = '0';
+}
+
 const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('role');
   localStorage.removeItem('username');
   window.location.href = '../UI/index.html';
 };
-
-/* Set the width of the sidebar to 250px (show it) */
-function openNav() {
-  document.getElementById('mySidepanel').style.width = '250px';
-}
-
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById('mySidepanel').style.width = '0';
-}
