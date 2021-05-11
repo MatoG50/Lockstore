@@ -99,6 +99,14 @@ function closeNav() {
   document.getElementById('mySidepanel').style.width = '0';
 }
 
+const employees = () => {
+  window.location.href = '../UI/employees.html';
+};
+
+const dashboard = () => {
+  window.location.href = '../UI/dashboard.html';
+};
+
 const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('role');

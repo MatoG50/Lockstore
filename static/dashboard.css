@@ -404,6 +404,7 @@ h3 {
     height: 35px;
   }
 }
+/*----SMALL MOBILE DEVICES------*/
 
 @media only screen and (max-width: 480px) {
   #logo-mobile {
