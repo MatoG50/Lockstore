@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/employees.css" rel="stylesheet" />
+    <title>Employees</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
+        </div>
+        <div class="photo"></div>
+        <div class="name">
+          <p class="user-name"></p>
+          <p class="user-role"></p>
+        </div>
+        <div class="nav">
+          <ul class="main-nav">
+            <li><a onclick="dashboard()" href="#">Dashboard</a></li>
+            <li><a onclick="employees()" href="#">Employees</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a onclick="logout()" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="date"></div>
+        <div class="employees-title">
+            <p class="emp">Employees</p>
+            <div class="underline"></div>
+            <p class="total-emp">Total employees:<span class="total-employees"> 20</span></p>
+      </div>
+      <div class="employee-info">
+          <div class="attendants">
+              <p>Attendants: <span>10</span></p>
+          </div>
+          <div class="admin">
+              <p>Admin: <span>10</span></p>
+          </div>
+          <div>
+              <button id="add-employee" type="button">Add Employee</button>
+          </div>
+      </div>
+      <div class="employee-details">
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+        <div class="employee-card">
+            <img src="../resources/user.svg" alt="user-image" id="user-image">
+            <p class="employee-card-name">Paul Otieno</p>
+            <P class="employee-card-role">Admin</P>
+        </div>
+      </div>
+    </div>
+    <script src="../js/employees.js"></script>
+  </body>
+</html>
