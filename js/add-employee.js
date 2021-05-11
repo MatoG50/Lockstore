@@ -16,22 +16,13 @@ const todaysDate = new Date().toDateString();
 const date = document.querySelector('.date');
 date.innerHTML = todaysDate;
 
-// Image
-
 if (localStorage.getItem('role') === 'attendant') {
   document.querySelector('.photo').innerHTML =
-    '<img src="../resources/MGK.jpg" id="user-photo" alt="Attendant" />';
+    '<img src="../resources/MGK.jpg" id="user-photo-emp" alt="Attendant" />';
 } else {
   document.querySelector('.photo').innerHTML =
-    '<img src="../resources/paul.jfif" id="user-photo" alt="Admin" />';
+    '<img src="../resources/paul.jfif" id="user-photo-emp" alt="Admin" />';
 }
-// if (localStorage.getItem('role') === 'attendant') {
-//   document.querySelector('.mobi-photo').innerHTML =
-//     '<img src="../resources/MGK.jpg" id="mobi-photo" alt="Admin" />';
-// } else {
-//   document.querySelector('.mobi-photo').innerHTML =
-//     '<img src="../resources/paul.jfif" id="mobi-photo" alt="Admin" />';
-// }
 
 const employees = () => {
   window.location.href = '../UI/employees.html';

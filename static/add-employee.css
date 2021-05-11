@@ -53,7 +53,7 @@ a:active {
   color: #24c6dc;
 }
 
-#user-photo {
+#user-photo-emp {
   width: 63%;
   height: 63%;
   margin-bottom: 2%;
@@ -145,9 +145,10 @@ ul {
   letter-spacing: normal;
   text-align: left;
   color: #6f6f6f;
+  white-space: nowrap;
 }
 
-.underline {
+.underline-text {
   width: 70px;
   height: 0;
   border: solid 5px #24c6dc;
@@ -159,144 +160,81 @@ ul {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.total-emp {
-  width: 285px;
-  height: 34px;
-  font-family: Montserrat;
-  font-size: 28px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.21;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6f6f6f;
-}
 
-.employee-details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 6%;
-}
-.total-employees {
-  color: #24c6dc;
-}
-.employee-card {
-  width: 300px;
-  height: 300px;
-  margin: 32px;
-  border-radius: 29px;
-  box-shadow: 0 3px 30px 0 rgba(36, 198, 220, 0.07);
-  background-color: #ffffff;
-}
-#user-image {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  display: block;
-  margin: 10% auto;
-}
-
-.employee-card p {
-  text-align: center;
-}
-.employee-card-name {
-  height: 43px;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  color: #24c6dc;
-}
-.employee-card-role {
-  height: 37px;
-  font-family: Montserrat;
-  font-size: 26px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6f6f6f;
-  margin-top: 5%;
-}
-
-.employee-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 9%;
-}
-
-.attendants {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #3bb49d;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-.admin {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #b43b8a;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-
-.admin p,
-.attendants p {
-  text-align: center;
-  line-height: 52px;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.attendants p {
-  color: #3bb49d;
-}
-.admin p {
-  color: #b43b8a;
-}
-
-#add-employee {
-  width: 300px;
-  height: 52px;
+.add-employee-div {
+  width: 40%;
+  height: 62%;
   border-radius: 10px;
-  border: solid 1px;
-  background-color: #b43b8a;
-  color: white;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
+  box-shadow: rgba(159, 216, 216, 0.24);
+  background-color: #ffffff;
+  backdrop-filter: blur(30px);
+  margin: 5% auto 10% auto;
+  overflow: auto;
 }
-#add-employee:hover {
-  background-color: #b43b8a9f;
+.add-employee-form {
+  margin: 10% auto 5% auto;
+  display: table;
 }
 
-/* ----------------------------------
---------Big Laptop-------------------
--------------------------------------- */
-@media only screen and (max-width: 1440px) {
-  .logo img {
-    width: 100%;
-  }
-  .employee-card {
-    width: 270px;
-    height: 270px;
-    margin: 28px;
-  }
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6f6f6f;
+  background: transparent;
+  outline: 0;
+  margin: 20px auto 20px auto;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+input[type='password']:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='text']:hover {
+  border-bottom-color: #24c6dc;
+}
+
+.confirm-password,
+.username,
+.password,
+.email,
+.role {
+  height: 19px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+}
+
+#add-employee-btn {
+  background-color: #24c6dc;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding: 10px 70px 10px 70px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 500;
+  display: inline-block;
+  height: 38px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#add-employee-btn:hover {
+  background-color: #24c7dc98;
 }

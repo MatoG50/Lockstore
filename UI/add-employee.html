@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/add-employee.css" rel="stylesheet" />
+    <title>AddEmployee</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
+        </div>
+        <div class="photo"></div>
+        <div class="name">
+          <p class="user-name"></p>
+          <p class="user-role"></p>
+        </div>
+        <div class="nav">
+          <ul class="main-nav">
+            <li><a onclick="dashboard()" href="#">Dashboard</a></li>
+            <li><a onclick="employees()" href="#">Employees</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a onclick="logout()" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="date"></div>
+        <div class="employees-title">
+          <p class="emp">Add Employee</p>
+          <div class="underline-text"></div>
+        </div>
+        <div class="add-employee-div">
+          <form method="post" action="#" class="add-employee-form">
+            <label for="Username" class="username">Username</label><br />
+            <input type="text" id="username" name="username" required /><br />
+            <label for="email" class="email">Email</label><br />
+            <input type="email" id="emp-email" name="email" required /><br />
+            <label for="password" class="password">Password</label><br />
+            <input
+              type="password"
+              id="emp-password"
+              name="password"
+              required
+            /><br />
+            <label for="password" class="confirm-password"
+              >Confirm Password</label
+            ><br />
+            <input
+              type="password"
+              id="emp-confirm-password"
+              name="password"
+              required
+            /><br />
+            <label for="role" class="role">Role</label><br />
+            <input type="text" id="role" name="role" required /><br />
+          </form>
+          <a href="#" id="add-employee-btn">Add Employee</a>
+        </div>
+      </div>
+    </div>
+    <script src="../js/add-employee.js"></script>
+  </body>
+</html>
