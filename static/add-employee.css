@@ -240,3 +240,16 @@ input[type='text']:hover {
 #add-employee-btn:hover {
   background-color: #24c7dc98;
 }
+
+/* ----------------------------------
+--------Big Laptop-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  .logo img {
+    width: 100%;
+  }
+
+  #add-employee-btn {
+    width: 60%;
+  }
+}
