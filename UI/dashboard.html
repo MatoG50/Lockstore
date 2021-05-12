@@ -30,8 +30,8 @@
           <p class="mobi-user-name"></p>
           <p class="mobi-user-role"></p>
         </div>
-        <a href="#">Dashboard</a>
-        <a href="#">Employees</a>
+        <a class="mobi-col" onclick="dashboard()" href="#">Dashboard</a>
+        <a onclick="employees()" href="#">Employees</a>
         <a href="#">Products</a>
         <a href="#">Sales</a>
         <a onclick="logout()" href="#">Logout</a>
@@ -65,8 +65,12 @@
         <div class="date"></div>
         <div class="welcome-message">
           <div class="welcome-text">
-            <h2>WELCOME TO YOUR DASHBOARD, <span class="first-name"></span></h2>
-            <h3>View you company's performance through the cards below.</h3>
+            <p class="p-main">
+              WELCOME TO YOUR DASHBOARD, <span class="first-name"></span>
+            </p>
+            <p class="p-sub">
+              View you company's performance through the cards below.
+            </p>
           </div>
         </div>
         <div class="cards">

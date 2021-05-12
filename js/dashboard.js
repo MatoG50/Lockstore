@@ -107,6 +107,7 @@ const dashboard = () => {
   window.location.href = '../UI/dashboard.html';
 };
 document.querySelector('.dash-col').style.color = '#0984e3';
+document.querySelector('.mobi-col').style.color = '#0984e3';
 
 const logout = () => {
   localStorage.removeItem('token');

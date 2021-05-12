@@ -13,6 +13,32 @@
     <title>Employees</title>
   </head>
   <body>
+    <header class="mobi-header">
+      <div class="mobi-logo">
+        <img
+          src="../resources/LockStore Logo.svg"
+          id="logo-mobile"
+          alt="LockStore Logo"
+        />
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="mobi-photo"></div>
+        <div class="mobi-name">
+          <p class="mobi-user-name"></p>
+          <p class="mobi-user-role"></p>
+        </div>
+        <a onclick="dashboard()" href="#">Dashboard</a>
+        <a class="mobi-col" onclick="employees()" href="#">Employees</a>
+        <a href="#">Products</a>
+        <a href="#">Sales</a>
+        <a onclick="logout()" href="#">Logout</a>
+      </div>
+
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </header>
     <div class="container">
       <div class="nav-bar">
         <div class="logo">
@@ -45,7 +71,7 @@
               <p>Attendants: <span class="att-span"></span></p>
           </div>
           <div class="admin">
-              <p>Admin: <span class="admin-span">10</span></p>
+              <p >Admin: <span class="admin-span">10</span></p>
           </div>
           <div>
               <button onclick="addEmployee()" id="add-employee" type="button">Add Employee</button>

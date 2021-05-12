@@ -11,6 +11,10 @@ const totalEmployees = document.querySelector('.total-employees');
 const attendants = document.querySelector('.att-span');
 const admins = document.querySelector('.admin-span');
 const employeesContainer = document.querySelector('.employee-details');
+const mobiUserName = document.querySelector('.mobi-user-name');
+const mobiUserRole = document.querySelector('.mobi-user-role');
+mobiUserName.innerHTML = localStorage.getItem('username');
+mobiUserRole.innerHTML = localStorage.getItem('role');
 
 fetch(employeesUrl, {
   method: 'GET', // or 'PUT'
@@ -64,13 +68,13 @@ if (localStorage.getItem('role') === 'attendant') {
   document.querySelector('.photo').innerHTML =
     '<img src="../resources/paul.jfif" id="user-photo" alt="Admin" />';
 }
-// if (localStorage.getItem('role') === 'attendant') {
-//   document.querySelector('.mobi-photo').innerHTML =
-//     '<img src="../resources/MGK.jpg" id="mobi-photo" alt="Admin" />';
-// } else {
-//   document.querySelector('.mobi-photo').innerHTML =
-//     '<img src="../resources/paul.jfif" id="mobi-photo" alt="Admin" />';
-// }
+if (localStorage.getItem('role') === 'attendant') {
+  document.querySelector('.mobi-photo').innerHTML =
+    '<img src="../resources/MGK.jpg" id="mobi-photo" alt="Admin" />';
+} else {
+  document.querySelector('.mobi-photo').innerHTML =
+    '<img src="../resources/paul.jfif" id="mobi-photo" alt="Admin" />';
+}
 
 const employees = () => {
   window.location.href = '../UI/employees.html';
@@ -79,10 +83,21 @@ const employees = () => {
 const dashboard = () => {
   window.location.href = '../UI/dashboard.html';
 };
-document.querySelector('.emp-col').style.color = '#0984e3';
 const addEmployee = () => {
   window.location.href = '../UI/add-employee.html';
 };
+
+document.querySelector('.emp-col').style.color = '#0984e3';
+document.querySelector('.mobi-col').style.color = '#0984e3';
+
+/* width of the sidebar*/
+function openNav() {
+  document.getElementById('mySidepanel').style.width = '250px';
+}
+
+function closeNav() {
+  document.getElementById('mySidepanel').style.width = '0';
+}
 
 const logout = () => {
   localStorage.removeItem('token');
