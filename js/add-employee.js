@@ -41,3 +41,37 @@ const logout = () => {
   localStorage.removeItem('username');
   window.location.href = '../UI/index.html';
 };
+
+// Adding Employee
+const newUserName = document.getElementById('username');
+const newUserEmail = document.getElementById('emp-email');
+const newUserPassword = document.getElementById('emp-confirm-password');
+const newUserRole = document.getElementById('role');
+
+let addEmployeeDetails = {};
+let signUpUrl = 'https://storemanagerapi2.herokuapp.com/api/v2/auth/signup';
+
+const signUp = function () {
+  addEmployeeDetails.username = newUserName.value;
+  addEmployeeDetails.email = newUserEmail.value;
+  addEmployeeDetails.password = newUserPassword.value;
+  addEmployeeDetails.role = newUserRole.value;
+
+  console.log(addEmployeeDetails);
+
+  fetch(signUpUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    },
+    body: JSON.stringify(addEmployeeDetails),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+};
