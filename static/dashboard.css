@@ -140,10 +140,10 @@ li {
   letter-spacing: normal;
   text-align: center;
 }
-a {
+li a {
   color: #010101;
 }
-a:hover {
+li a:hover {
   color: #24c6dc;
 }
 

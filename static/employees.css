@@ -197,6 +197,11 @@ ul {
   object-fit: contain;
   display: block;
   margin: 10% auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .employee-card p {
@@ -211,6 +216,7 @@ ul {
   line-height: 1.23;
   letter-spacing: normal;
   color: #24c6dc;
+  text-transform: capitalize;
 }
 .employee-card-role {
   height: 37px;
@@ -224,6 +230,7 @@ ul {
   text-align: left;
   color: #6f6f6f;
   margin-top: 5%;
+  text-transform: capitalize;
 }
 
 .employee-info {
