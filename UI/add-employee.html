@@ -40,15 +40,29 @@
           <div class="underline-text"></div>
         </div>
         <div class="add-employee-div">
+          <p id="error-message"></p>
           <form method="post" action="#" class="add-employee-form">
             <label for="Username" class="username">Username</label><br />
-            <input type="text" id="username" name="username" required /><br />
+            <input
+              type="text"
+              oninput="hideError()"
+              id="username"
+              name="username"
+              required
+            /><br />
             <label for="email" class="email">Email</label><br />
-            <input type="email" id="emp-email" name="email" required /><br />
+            <input
+              type="email"
+              id="emp-email"
+              oninput="hideError()"
+              name="email"
+              required
+            /><br />
             <label for="password" class="password">Password</label><br />
             <input
               type="password"
               id="emp-password"
+              oninput="hideError()"
               name="password"
               required
             /><br />
@@ -58,13 +72,47 @@
             <input
               type="password"
               id="emp-confirm-password"
+              oninput="hideError()"
               name="password"
               required
             /><br />
             <label for="role" class="role">Role</label><br />
-            <input type="text" id="role" name="role" required /><br />
+            <input
+              type="text"
+              id="role"
+              oninput="hideError()"
+              name="role"
+              required
+            /><br />
           </form>
           <a href="#" onclick="signUp()" id="add-employee-btn">Add Employee</a>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close"
+              ><img
+                src="../resources/close-x.svg"
+                alt="close"
+                onclick="closeModal()"
+                id="close-x"
+            /></span>
+            <img
+              id="check-mark"
+              src="../resources/check-mark-button.svg"
+              alt="check-mark"
+            />
+            <p class="success-mess">User created successfully</p>
+            <p class="user-det">New user details</p>
+            <div class="underline-user-text"></div>
+            <p class="p-usn">Username: <span class="s-usn"></span></p>
+            <p class="p-em">Email: <span class="s-em"></span></p>
+            <p class="p-rol">Role: <span class="s-rol"></span></p>
+            <a class="go-to-emp" onclick="goToEmployees()" href="#"
+              >Go to employees</a
+            >
+          </div>
         </div>
       </div>
     </div>

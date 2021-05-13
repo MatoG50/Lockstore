@@ -58,6 +58,8 @@ a:active {
   height: 63%;
   margin-bottom: 2%;
   margin-top: 15%;
+  margin-right: auto;
+  margin-left: auto;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #24c6dc;
@@ -163,13 +165,14 @@ ul {
 
 .add-employee-div {
   width: 40%;
-  height: 62%;
+  height: 66%;
   border-radius: 10px;
   box-shadow: rgba(159, 216, 216, 0.24);
   background-color: #ffffff;
   backdrop-filter: blur(30px);
   margin: 5% auto 10% auto;
   overflow: auto;
+  position: relative;
 }
 .add-employee-form {
   margin: 10% auto 5% auto;
@@ -218,7 +221,7 @@ input[type='text']:hover {
   border: none;
   color: white;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  padding: 10px 70px 10px 70px;
+  padding-top: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -239,7 +242,136 @@ input[type='text']:hover {
 #add-employee-btn:hover {
   background-color: #24c7dc98;
 }
+#error-message {
+  display: none;
+  font-family: Montserrat;
+  font-size: 13px;
+  background-color: #ff2d67;
+  color: white;
+  padding: 4px 7px;
+  width: 60%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 
+/* ------Modal------- */
+.modal {
+  width: 30%;
+  height: 60%;
+  /* margin-right: auto;
+  margin-left: auto; */
+  left: 44.5%;
+  right: auto;
+  top: 20%;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  position: absolute;
+}
+
+#check-mark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+}
+
+#close-x {
+  width: 40px;
+  height: 40px;
+  margin-top: 14px;
+  margin-left: 90%;
+}
+#close-x:hover {
+  opacity: 40%;
+}
+
+.success-mess {
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3bb49d;
+}
+
+.underline-user-text {
+  width: 30px;
+  height: 0;
+  border: solid 3px #24c6dc;
+  margin-top: 0;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  margin-left: 9%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.go-to-emp {
+  width: 250px;
+  height: 50px;
+  padding-top: 13px;
+  border-radius: 40px;
+  background-color: #b43b8a;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.user-det {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 18px;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  width: 70%;
+  margin-left: 9%;
+}
+.p-usn,
+.p-rol,
+.p-em {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  margin-left: 9%;
+  width: 70%;
+}
+.s-usn,
+.s-rol,
+.s-em {
+  color: #24c6dc;
+}
 /* ----------------------------------
 --------Big Laptop-------------------
 -------------------------------------- */

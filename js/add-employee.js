@@ -45,16 +45,30 @@ const logout = () => {
 // Adding Employee
 const newUserName = document.getElementById('username');
 const newUserEmail = document.getElementById('emp-email');
+const newPassword = document.getElementById('emp-password');
 const newUserPassword = document.getElementById('emp-confirm-password');
 const newUserRole = document.getElementById('role');
+const errorMessage = document.getElementById('error-message');
 
 let addEmployeeDetails = {};
 let signUpUrl = 'https://storemanagerapi2.herokuapp.com/api/v2/auth/signup';
 
+// Modal
+const modal = document.getElementById('myModal');
+const main = document.querySelector('.main');
+const addEmployeeForm = document.querySelector('.add-employee-div');
+const employeeForm = document.querySelector('.add-employee-form');
+const modalUsername = document.querySelector('.s-usn');
+const modalEmail = document.querySelector('.s-em');
+const modalRole = document.querySelector('.s-rol');
+
 const signUp = function () {
   addEmployeeDetails.username = newUserName.value;
   addEmployeeDetails.email = newUserEmail.value;
-  addEmployeeDetails.password = newUserPassword.value;
+  newPassword.value === newUserPassword.value
+    ? (addEmployeeDetails.password = newUserPassword.value)
+    : (addEmployeeDetails.password = '');
+
   addEmployeeDetails.role = newUserRole.value;
 
   console.log(addEmployeeDetails);
@@ -70,8 +84,49 @@ const signUp = function () {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
+      if (
+        data.message === 'Username cannot be blank.' ||
+        data.message ===
+          'You do not have authorization to access this feature.' ||
+        data.message ===
+          "Please insert a role of 'attendant' or an 'admin' only." ||
+        data.message ===
+          'Please use a valid email and ensure the password exceeds 6 characters.' ||
+        data.message === 'Password cannot be blank'
+      ) {
+        errorMessage.innerHTML = data.message;
+        errorMessage.style.display = 'block';
+      } else if (data.message === 'User created successfully') {
+        modal.style.display = 'block';
+        main.style.backgroundColor = 'rgba(0,0,0,0.4)';
+        addEmployeeForm.style.display = 'none';
+        modalUsername.innerHTML = addEmployeeDetails.username;
+        modalEmail.innerHTML = addEmployeeDetails.email;
+        modalRole.innerHTML = addEmployeeDetails.role;
+        errorMessage.style.display = 'none';
+      } else {
+        errorMessage.style.display = 'none';
+      }
     })
     .catch(error => {
       console.error('Error:', error);
     });
+};
+
+const hideError = function () {
+  errorMessage.style.display = 'none';
+};
+
+const closeModal = function () {
+  modal.style.display = 'none';
+  addEmployeeForm.style.display = 'block';
+  newUserName.value = '';
+  newUserEmail.value = '';
+  newPassword.value = '';
+  newUserPassword.value = '';
+  newUserRole.value = '';
+};
+
+const goToEmployees = function () {
+  window.location.href = '../UI/employees.html';
 };
