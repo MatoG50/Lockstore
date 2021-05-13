@@ -17,6 +17,9 @@
   grid-column: 1 / 2;
   background: white;
   text-align: center;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
 }
 
 .main {
@@ -87,7 +90,8 @@ ul {
   color: #24c6dc;
 }
 
-.logo {
+.logo,
+.mobi-logo {
   height: 37px;
   margin: 2px 50px 89px 12px;
   font-family: Montserrat;
@@ -118,7 +122,9 @@ ul {
   text-transform: uppercase;
 }
 
-.user-role {
+.user-role,
+.mobi-user-role,
+.mobi-user-name {
   height: 3%;
   margin-top: 26px;
   margin-bottom: 36px;
@@ -153,7 +159,7 @@ ul {
 .underline-text {
   width: 70px;
   height: 0;
-  border: solid 5px #24c6dc;
+  border: solid 2px #24c6dc;
   margin-top: 2px;
   margin-bottom: 22px;
   border-radius: 15px;
@@ -263,8 +269,7 @@ input[type='text']:hover {
 .modal {
   width: 30%;
   height: 60%;
-  /* margin-right: auto;
-  margin-left: auto; */
+  margin-left: auto;
   left: 44.5%;
   right: auto;
   top: 20%;
@@ -330,6 +335,7 @@ input[type='text']:hover {
   padding-top: 13px;
   border-radius: 40px;
   background-color: #b43b8a;
+  font-family: Montserrat;
   font-size: 20px;
   margin-top: 30px;
   text-align: center;
@@ -337,6 +343,9 @@ input[type='text']:hover {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+.go-to-emp:hover {
+  color: white;
 }
 .user-det {
   height: 34px;
@@ -372,6 +381,77 @@ input[type='text']:hover {
 .s-em {
   color: #24c6dc;
 }
+#user-image,
+#mobi-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 10% auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+header {
+  display: none;
+  background: white;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #24c6dc;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #24c6dc;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
 /* ----------------------------------
 --------Big Laptop-------------------
 -------------------------------------- */
@@ -379,8 +459,130 @@ input[type='text']:hover {
   .logo img {
     width: 100%;
   }
+}
 
-  #add-employee-btn {
+/* ----------------------------------
+--------Big Laptop-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  .logo img {
+    width: 100%;
+  }
+}
+
+/* -----------------------------------------
+------------Small laptops---------------
+----------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .welcome-text {
+    margin-left: 20px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .user-name,
+  .user-role,
+  li {
+    font-size: 20px;
+  }
+  .main-nav {
+    padding-left: 2px;
+    width: 80%;
+  }
+  #add-employee,
+  .attendants,
+  .admin {
+    margin-top: 20px;
+  }
+  .add-employee-div {
     width: 60%;
+  }
+  .modal {
+    left: 35%;
+    width: 50%;
+  }
+  #close-x {
+    margin-left: 85%;
+  }
+}
+
+/* -----------------------------------------
+------------MOBILE DEVICES---------------
+----------------------------------------- */
+
+@media only screen and (max-width: 481px) {
+  header {
+    display: block;
+    background-color: #ffffff;
+  }
+  .container {
+    overflow: auto;
+    grid-template-columns: 0 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .date {
+    display: none;
+  }
+  .mobi-user-name,
+  .mobi-user-role {
+    text-align: left;
+    font-weight: normal;
+    margin: 0 auto;
+    padding-left: 13%;
+  }
+  #mobi-photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+
+  .mobi-logo {
+    height: 12px;
+    font-size: 15px;
+    float: right;
+  }
+  #logo-mobile {
+    height: 35px;
+  }
+  .add-employee-div {
+    width: 80%;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 480px) {
+  #logo-mobile {
+    height: 30px;
+  }
+  .add-employee-div {
+    width: 80%;
+  }
+  .modal {
+    left: 10%;
+    width: 80%;
+  }
+
+  #check-mark {
+    margin-top: 1px;
+    width: 70px;
+    height: 70px;
+  }
+
+  #close-x {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 80%;
+  }
+  .go-to-emp {
+    width: 75%;
+  }
+  #add-employee-btn {
+    width: 50%;
   }
 }

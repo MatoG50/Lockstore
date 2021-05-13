@@ -4,6 +4,25 @@
 
 const token = localStorage.getItem('token');
 console.log('Token:', token);
+// Image
+
+if (localStorage.getItem('role') === 'attendant') {
+  document.querySelector('.photo').innerHTML =
+    '<img src="../resources/MGK.jpg" id="user-photo" alt="Attendant" />';
+} else {
+  document.querySelector('.photo').innerHTML =
+    '<img src="../resources/paul.jfif" id="user-photo" alt="Admin" />';
+}
+if (localStorage.getItem('role') === 'attendant') {
+  document.querySelector('.mobi-photo').innerHTML =
+    '<img src="../resources/MGK.jpg" id="mobi-photo" alt="Admin" />';
+} else {
+  document.querySelector('.mobi-photo').innerHTML =
+    '<img src="../resources/paul.jfif" id="mobi-photo" alt="Admin" />';
+}
+
+document.querySelector('.em-col').style.color = '#0984e3';
+document.querySelector('.mob-col').style.color = '#0984e3';
 
 // User
 const userName = document.querySelector('.user-name');
@@ -42,6 +61,15 @@ const logout = () => {
   window.location.href = '../UI/index.html';
 };
 
+/* width of the sidebar*/
+function openNav() {
+  document.getElementById('mySidepanel').style.width = '250px';
+}
+
+function closeNav() {
+  document.getElementById('mySidepanel').style.width = '0';
+}
+
 // Adding Employee
 const newUserName = document.getElementById('username');
 const newUserEmail = document.getElementById('emp-email');
@@ -62,14 +90,20 @@ const modalUsername = document.querySelector('.s-usn');
 const modalEmail = document.querySelector('.s-em');
 const modalRole = document.querySelector('.s-rol');
 
+errorMessage.innerHTML = '';
+errorMessage.style.display = 'none';
 const signUp = function () {
   addEmployeeDetails.username = newUserName.value;
   addEmployeeDetails.email = newUserEmail.value;
-  newPassword.value === newUserPassword.value
-    ? (addEmployeeDetails.password = newUserPassword.value)
-    : (addEmployeeDetails.password = '');
+  addEmployeeDetails.password = newPassword.value;
 
   addEmployeeDetails.role = newUserRole.value;
+  if (newPassword.value !== newUserPassword.value) {
+    errorMessage.innerHTML = 'Passwords do not match';
+    errorMessage.style.display = 'block';
+
+    return;
+  }
 
   console.log(addEmployeeDetails);
 
