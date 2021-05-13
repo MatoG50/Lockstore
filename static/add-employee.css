@@ -56,11 +56,13 @@ a:active {
   color: #24c6dc;
 }
 
-#user-photo {
+#user-photo-emp {
   width: 63%;
   height: 63%;
   margin-bottom: 2%;
   margin-top: 15%;
+  margin-right: auto;
+  margin-left: auto;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #24c6dc;
@@ -151,9 +153,10 @@ ul {
   letter-spacing: normal;
   text-align: left;
   color: #6f6f6f;
+  white-space: nowrap;
 }
 
-.underline {
+.underline-text {
   width: 70px;
   height: 0;
   border: solid 2px #24c6dc;
@@ -165,37 +168,218 @@ ul {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.total-emp {
-  width: 285px;
-  height: 34px;
+
+.add-employee-div {
+  width: 40%;
+  height: 66%;
+  border-radius: 10px;
+  box-shadow: rgba(159, 216, 216, 0.24);
+  background-color: #ffffff;
+  backdrop-filter: blur(30px);
+  margin: 5% auto 10% auto;
+  overflow: auto;
+  position: relative;
+}
+.add-employee-form {
+  margin: 10% auto 5% auto;
+  display: table;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6f6f6f;
+  background: transparent;
+  outline: 0;
+  margin: 20px auto 20px auto;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+input[type='password']:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='text']:hover {
+  border-bottom-color: #24c6dc;
+}
+
+.confirm-password,
+.username,
+.password,
+.email,
+.role {
+  height: 19px;
   font-family: Montserrat;
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 16px;
   font-weight: 600;
-  font-stretch: normal;
   font-style: normal;
-  line-height: 1.21;
+  line-height: 1.19;
   letter-spacing: normal;
   text-align: left;
   color: #6f6f6f;
 }
 
-.employee-details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 6%;
+#add-employee-btn {
+  background-color: #24c6dc;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 500;
+  display: block;
+  height: 38px;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
-.total-employees {
-  color: #24c6dc;
+#add-employee-btn:hover {
+  background-color: #24c7dc98;
 }
-.employee-card {
-  width: 300px;
-  height: 300px;
-  margin: 32px;
-  border-radius: 29px;
-  box-shadow: 0 3px 30px 0 rgba(36, 198, 220, 0.07);
+#error-message {
+  display: none;
+  font-family: Montserrat;
+  font-size: 13px;
+  background-color: #ff2d67;
+  color: white;
+  padding: 4px 7px;
+  width: 60%;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* ------Modal------- */
+.modal {
+  width: 30%;
+  height: 60%;
+  margin-left: auto;
+  left: 44.5%;
+  right: auto;
+  top: 20%;
+  border-radius: 10px;
+  border: solid 1px #707070;
   background-color: #ffffff;
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  position: absolute;
+}
+
+#check-mark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+}
+
+#close-x {
+  width: 40px;
+  height: 40px;
+  margin-top: 14px;
+  margin-left: 90%;
+}
+#close-x:hover {
+  opacity: 40%;
+}
+
+.success-mess {
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3bb49d;
+}
+
+.underline-user-text {
+  width: 30px;
+  height: 0;
+  border: solid 3px #24c6dc;
+  margin-top: 0;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  margin-left: 9%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.go-to-emp {
+  width: 250px;
+  height: 50px;
+  padding-top: 13px;
+  border-radius: 40px;
+  background-color: #b43b8a;
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.go-to-emp:hover {
+  color: white;
+}
+.user-det {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 18px;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  width: 70%;
+  margin-left: 9%;
+}
+.p-usn,
+.p-rol,
+.p-em {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  margin-left: 9%;
+  width: 70%;
+}
+.s-usn,
+.s-rol,
+.s-em {
+  color: #24c6dc;
 }
 #user-image,
 #mobi-photo {
@@ -210,101 +394,11 @@ ul {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
-.employee-card p {
-  text-align: center;
-}
-.employee-card-name {
-  height: 43px;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  color: #24c6dc;
-  text-transform: capitalize;
-}
-.employee-card-role {
-  height: 37px;
-  font-family: Montserrat;
-  font-size: 26px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6f6f6f;
-  margin-top: 5%;
-  text-transform: capitalize;
-}
-
-.employee-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 9%;
-}
-
-.attendants {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #3bb49d;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-.admin {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #b43b8a;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-
-.admin p,
-.attendants p {
-  text-align: center;
-  line-height: 52px;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.attendants p {
-  color: #3bb49d;
-}
-.admin p {
-  color: #b43b8a;
-}
-
-#add-employee {
-  width: 300px;
-  height: 52px;
-  border-radius: 10px;
-  border: solid 1px;
-  background-color: #b43b8a;
-  color: white;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
-}
-#add-employee:hover {
-  background-color: #b43b8a9f;
-}
-
 header {
   display: none;
   background: white;
 }
+
 /* The sidepanel menu */
 .sidepanel {
   height: 100%;
@@ -365,10 +459,14 @@ header {
   .logo img {
     width: 100%;
   }
-  .employee-card {
-    width: 270px;
-    height: 270px;
-    margin: 28px;
+}
+
+/* ----------------------------------
+--------Big Laptop-------------------
+-------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  .logo img {
+    width: 100%;
   }
 }
 
@@ -396,19 +494,15 @@ header {
   .admin {
     margin-top: 20px;
   }
-}
-
-/* -----------------------------------------
-------------Tablets---------------
------------------------------------------ */
-
-@media only screen and (max-width: 768px) {
-  .attendants,
-  .admin {
-    width: 300px;
+  .add-employee-div {
+    width: 60%;
   }
-  #add-attendant {
-    width: 100px;
+  .modal {
+    left: 35%;
+    width: 50%;
+  }
+  #close-x {
+    margin-left: 85%;
   }
 }
 
@@ -454,24 +548,8 @@ header {
   #logo-mobile {
     height: 35px;
   }
-  .employee-details {
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .employee-info {
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .attendants,
-  .admin {
-    margin-right: auto;
-    margin-left: auto;
-    width: 250px;
-    margin-bottom: 20px;
-  }
-  #add-employee {
-    width: 250px;
+  .add-employee-div {
+    width: 80%;
   }
 }
 
@@ -481,7 +559,30 @@ header {
   #logo-mobile {
     height: 30px;
   }
-  .employees-title {
-    margin-left: 10%;
+  .add-employee-div {
+    width: 80%;
+  }
+  .modal {
+    left: 10%;
+    width: 80%;
+  }
+
+  #check-mark {
+    margin-top: 1px;
+    width: 70px;
+    height: 70px;
+  }
+
+  #close-x {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 80%;
+  }
+  .go-to-emp {
+    width: 75%;
+  }
+  #add-employee-btn {
+    width: 50%;
   }
 }

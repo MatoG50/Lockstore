@@ -43,8 +43,11 @@ header {
 #mobi-photo {
   width: 63%;
   height: 63%;
+  display: block;
   margin-bottom: 2%;
   margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #24c6dc;
@@ -140,10 +143,10 @@ li {
   letter-spacing: normal;
   text-align: center;
 }
-a {
+li a {
   color: #010101;
 }
-a:hover {
+li a:hover {
   color: #24c6dc;
 }
 
@@ -159,7 +162,7 @@ a:hover {
 .welcome-text {
   margin-left: 77px;
 }
-h2 {
+.p-main {
   margin-top: 15%;
   padding-top: 5%;
   height: 49px;
@@ -170,7 +173,7 @@ h2 {
   letter-spacing: normal;
   color: #ffffff;
 }
-h3 {
+.p-sub {
   height: 34px;
   font-family: Montserrat;
   padding-top: 6%;
@@ -213,6 +216,7 @@ h3 {
   margin-top: 6%;
 }
 
+/* ------Mobile side panel---------- */
 /* The sidepanel menu */
 .sidepanel {
   height: 100%;
@@ -297,7 +301,44 @@ h3 {
   .user-name,
   .user-role,
   li {
+    font-size: 20px;
+  }
+  .main-nav {
+    padding-left: 2px;
+    width: 80%;
+  }
+  .p-main {
     font-size: 25px;
+  }
+  .p-sub {
+    font-size: 20px;
+  }
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+  .card-name {
+    font-size: 15px;
+  }
+  .card-number {
+    font-size: 120px;
+  }
+}
+
+/* -----------------------------------------
+------------Tablets---------------
+----------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .welcome-text {
+    margin-left: 20px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .user-name,
+  .user-role,
+  li {
+    font-size: 20px;
   }
   .main-nav {
     padding-left: 2px;
@@ -305,25 +346,26 @@ h3 {
   }
 
   .welcome-message {
-    width: 83%;
+    width: 85%;
     margin-left: 8%;
   }
-  h2 {
-    font-size: 25px;
-  }
-  h3 {
+  .p-main {
     font-size: 20px;
+  }
+  .p-sub {
+    font-size: 15px;
+    margin-top: 10px;
   }
   .card {
     margin: 0 30px;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
   .card-name {
-    font-size: 15px;
+    font-size: 12px;
   }
   .card-number {
-    font-size: 100px;
+    font-size: 80px;
   }
 }
 
@@ -331,7 +373,7 @@ h3 {
 ------------MOBILE DEVICES---------------
 ----------------------------------------- */
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 481px) {
   header {
     display: block;
     background-color: #ffffff;
@@ -372,13 +414,14 @@ h3 {
   .welcome-text {
     margin-left: 7%;
   }
-  h2 {
+
+  .p-main {
     height: 15px;
     margin-top: 2%;
     font-size: 15px;
     padding-bottom: 10%;
   }
-  h3 {
+  .p-sub {
     height: 14px;
     margin-top: 2%;
     font-size: 15px;
@@ -391,7 +434,8 @@ h3 {
     padding-left: 13%;
   }
   #mobi-photo {
-    margin-left: 18%;
+    width: 100px;
+    height: 100px;
     margin-top: 1%;
   }
 
