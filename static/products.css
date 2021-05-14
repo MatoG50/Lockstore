@@ -136,11 +136,16 @@ ul {
   color: #24c6dc;
   text-transform: capitalize;
 }
-.employees-title {
+
+/* ------------------------
+-----------Main------------
+----------------------------- */
+
+.products-title {
   margin: 3% auto 2% 7%;
 }
 
-.emp {
+.pro {
   width: 224px;
   height: 43px;
   font-family: Montserrat;
@@ -165,7 +170,7 @@ ul {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.total-emp {
+.total-pro {
   width: 285px;
   height: 34px;
   font-family: Montserrat;
@@ -179,115 +184,11 @@ ul {
   text-align: left;
   color: #6f6f6f;
 }
-
-.employee-details {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 6%;
-}
-.total-employees {
+.total-products {
   color: #24c6dc;
 }
-.employee-card {
-  width: 300px;
-  height: 300px;
-  margin: 32px;
-  border-radius: 29px;
-  box-shadow: 0 3px 30px 0 rgba(36, 198, 220, 0.07);
-  background-color: #ffffff;
-}
-#user-image,
-#mobi-photo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  display: block;
-  margin: 10% auto;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.employee-card p {
-  text-align: center;
-}
-.employee-card-name {
-  height: 43px;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  color: #24c6dc;
-  text-transform: capitalize;
-}
-.employee-card-role {
-  height: 37px;
-  font-family: Montserrat;
-  font-size: 26px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.23;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6f6f6f;
-  margin-top: 5%;
-  text-transform: capitalize;
-}
-
-.employee-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 9%;
-}
-
-.attendants {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #3bb49d;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-.admin {
-  width: 300px;
-  height: 52px;
-  border: solid 1px #b43b8a;
-  margin-right: 50px;
-  border-radius: 56px;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-}
-
-.admin p,
-.attendants p {
-  text-align: center;
-  line-height: 52px;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.attendants p {
-  color: #3bb49d;
-}
-.admin p {
-  color: #b43b8a;
-}
-
-#add-employee {
-  width: 300px;
+#add-product {
+  width: 250px;
   height: 52px;
   border-radius: 10px;
   border: solid 1px;
@@ -296,16 +197,106 @@ ul {
   font-family: Montserrat;
   font-weight: 600;
   font-size: 16px;
+  margin-left: 70%;
 }
-#add-employee:hover {
-  background-color: #b43b8a9f;
+#add-product:hover {
+  background-color: #b43b8ab4;
 }
+
+#search {
+  font-family: Montserrat;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3%;
+  display: block;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: white;
+  width: 30%;
+  border: none;
+  box-shadow: 0 3px 6px 0 rgba(36, 198, 220, 0.15);
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
+input[type='text'] {
+  outline: none;
+  color: #24c6dc;
+}
+::placeholder {
+  color: #24c6dc;
+}
+.product-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 6%;
+  margin-top: 3%;
+}
+.products-card {
+  width: 300px;
+  height: 300px;
+  margin: 32px;
+  border-radius: 29px;
+  box-shadow: 0 3px 30px 0 rgba(36, 198, 220, 0.07);
+  background-color: #ffffff;
+}
+#product-image,
+#mobi-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 5% auto;
+}
+.product-name {
+  height: 22px;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.23;
+  text-align: center;
+  letter-spacing: normal;
+  color: #24c6dc;
+  text-transform: capitalize;
+  margin-bottom: 15%;
+}
+.inventory,
+.cost {
+  height: 20px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  text-align: center;
+  margin-top: 6%;
+  text-transform: capitalize;
+}
+
+/* --------------------------
+.........Mobile Nav----------
+............................... */
 
 header {
   display: none;
   background: white;
 }
+
 /* The sidepanel menu */
+
 .sidepanel {
   height: 100%;
   width: 0;
@@ -365,7 +356,7 @@ header {
   .logo img {
     width: 100%;
   }
-  .employee-card {
+  .products-card {
     width: 270px;
     height: 270px;
     margin: 28px;
@@ -373,12 +364,9 @@ header {
 }
 
 /* -----------------------------------------
-------------Small laptops---------------
------------------------------------------ */
+  ------------Small laptops---------------
+  ----------------------------------------- */
 @media only screen and (max-width: 1200px) {
-  .welcome-text {
-    margin-left: 20px;
-  }
   .logo img {
     width: 100%;
   }
@@ -391,36 +379,31 @@ header {
     padding-left: 2px;
     width: 80%;
   }
-  #add-employee,
-  .attendants,
-  .admin {
+  #add-product {
     margin-top: 20px;
+    margin-left: 60%;
   }
 }
 
 /* -----------------------------------------
-------------Tablets---------------
------------------------------------------ */
+  ------------Tablets---------------
+  ----------------------------------------- */
 
 @media only screen and (max-width: 768px) {
-  .attendants,
-  .admin {
-    width: 300px;
+  #add-product {
+    width: 150px;
   }
-  #add-attendant {
-    width: 100px;
+  #search {
+    width: 35%;
   }
-  .employee-details {
-    margin-left: 25%;
-  }
-  .employee-info {
+  .product-details {
     margin-left: 25%;
   }
 }
 
 /* -----------------------------------------
-------------MOBILE DEVICES---------------
------------------------------------------ */
+  ------------MOBILE DEVICES---------------
+  ----------------------------------------- */
 
 @media only screen and (max-width: 481px) {
   header {
@@ -450,6 +433,11 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
   }
 
   .mobi-logo {
@@ -460,24 +448,26 @@ header {
   #logo-mobile {
     height: 35px;
   }
-  .employee-details {
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .employee-info {
+  .product-details {
     justify-content: center;
     margin: 0 auto;
   }
 
-  .attendants,
-  .admin {
-    margin-right: auto;
+  #add-product {
+    width: 250px;
+    display: block;
     margin-left: auto;
-    width: 250px;
-    margin-bottom: 20px;
+    margin-right: auto;
   }
-  #add-employee {
-    width: 250px;
+  #search {
+    width: 65%;
+  }
+  .product-name {
+    font-size: 24px;
+  }
+  .inventory,
+  .cost {
+    font-size: 20px;
   }
 }
 
@@ -487,7 +477,7 @@ header {
   #logo-mobile {
     height: 30px;
   }
-  .employees-title {
+  .products-title {
     margin-left: 10%;
   }
 }
