@@ -58,7 +58,7 @@ const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('role');
   localStorage.removeItem('username');
-  window.location.href = '../UI/index.html';
+  window.location.href = '../index.html';
 };
 
 /* width of the sidebar*/

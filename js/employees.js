@@ -11,10 +11,13 @@ const totalEmployees = document.querySelector('.total-employees');
 const attendants = document.querySelector('.att-span');
 const admins = document.querySelector('.admin-span');
 const employeesContainer = document.querySelector('.employee-details');
+// mobile
 const mobiUserName = document.querySelector('.mobi-user-name');
 const mobiUserRole = document.querySelector('.mobi-user-role');
 mobiUserName.innerHTML = localStorage.getItem('username');
 mobiUserRole.innerHTML = localStorage.getItem('role');
+
+// get emplpoyees
 
 fetch(employeesUrl, {
   method: 'GET', // or 'PUT'
@@ -83,6 +86,11 @@ const employees = () => {
 const dashboard = () => {
   window.location.href = '../UI/dashboard.html';
 };
+
+const products = () => {
+  window.location.href = '../UI/products.html';
+};
+
 const addEmployee = () => {
   window.location.href = '../UI/add-employee.html';
 };
@@ -103,5 +111,5 @@ const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('role');
   localStorage.removeItem('username');
-  window.location.href = '../UI/index.html';
+  window.location.href = '../index.html';
 };

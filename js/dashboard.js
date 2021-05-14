@@ -25,7 +25,7 @@ const token = localStorage.getItem('token');
 console.log('Token:', token);
 
 if (!token) {
-  window.location.href = '../UI/index.html';
+  window.location.href = '../index.html';
 } else {
   fetch(productsUrl, {
     method: 'GET', // or 'PUT'
@@ -99,6 +99,7 @@ function closeNav() {
   document.getElementById('mySidepanel').style.width = '0';
 }
 
+// Links
 const employees = () => {
   window.location.href = '../UI/employees.html';
 };
@@ -106,6 +107,10 @@ const employees = () => {
 const dashboard = () => {
   window.location.href = '../UI/dashboard.html';
 };
+const products = () => {
+  window.location.href = '../UI/products.html';
+};
+
 document.querySelector('.dash-col').style.color = '#0984e3';
 document.querySelector('.mobi-col').style.color = '#0984e3';
 
@@ -113,5 +118,5 @@ const logout = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('role');
   localStorage.removeItem('username');
-  window.location.href = '../UI/index.html';
+  window.location.href = '../index.html';
 };
