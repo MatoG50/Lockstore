@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link href="../static/add-product.css" rel="stylesheet" />
-    <title>Add product</title>
+    <link href="../static/update-product.css" rel="stylesheet" />
+    <title>Update product</title>
   </head>
   <body>
     <header class="mobi-header">
@@ -66,8 +66,9 @@
       <div class="main">
         <div class="date"></div>
         <div class="products-title">
-          <p class="pro">Add product</p>
+          <p class="pro">Update product</p>
           <div class="underline"></div>
+          <div class="back-prod"><a onclick="back()" id="back-btn" href="#">Back</a></div>
        
       </div>
       <div class="add-product-div">
@@ -116,7 +117,7 @@
             required
           /><br />
         </form>
-        <a href="#" onclick="addProduct()" id="add-product-btn">Add Product</a>
+        <a href="#" onclick="UpdateProduct()" id="add-product-btn">Update</a>
       </div>
           <!-- The Modal -->
           <div id="myModal" class="modal">
@@ -134,8 +135,8 @@
                 src="../resources/check-mark-button.svg"
                 alt="check-mark"
               />
-              <p class="success-mess">Product added successfully</p>
-              <p class="user-det">New product details</p>
+              <p class="success-mess">Product updated successfully</p>
+              <p class="user-det">New Product Details</p>
               <div class="underline-user-text"></div>
               <p class="prod-name"></p>
               <p class="prod-inv">Inventory: <span class="s-inv"></span></p>
@@ -147,6 +148,6 @@
             </div>
           </div>
     </div>
-    <script src="../js/add-product.js"></script>
+    <script src="../js/update-product.js"></script>
   </body>
 </html>

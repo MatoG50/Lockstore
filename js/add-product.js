@@ -1,3 +1,4 @@
+'use strict';
 // token
 
 const token = localStorage.getItem('token');
