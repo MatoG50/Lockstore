@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/add-product.css" rel="stylesheet" />
+    <title>Add product</title>
+  </head>
+  <body>
+    <header class="mobi-header">
+      <div class="mobi-logo">
+        <img
+          src="../resources/LockStore Logo.svg"
+          id="logo-mobile"
+          alt="LockStore Logo"
+        />
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="mobi-photo"></div>
+        <div class="mobi-name">
+          <p class="mobi-user-name"></p>
+          <p class="mobi-user-role"></p>
+        </div>
+        <a onclick="dashboard()" href="#">Dashboard</a>
+        <a onclick="employees()" href="#">Employees</a>
+        <a class="pro-mobi-col" onclick="products()" href="#">Products</a>
+        <a href="#">Sales</a>
+        <a onclick="logout()" href="#">Logout</a>
+      </div>
+
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </header>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
+        </div>
+        <div class="photo"></div>
+        <div class="name">
+          <p class="user-name"></p>
+          <p class="user-role"></p>
+        </div>
+        <div class="nav">
+          <ul class="main-nav">
+            <li><a onclick="dashboard()" href="#">Dashboard</a></li>
+            <li>
+              <a onclick="employees()" href="#">Employees</a>
+            </li>
+            <li>
+              <a class="pro-col" onclick="products()" href="#">Products</a>
+            </li>
+            <li><a href="#">Sales</a></li>
+            <li><a onclick="logout()" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="date"></div>
+        <div class="products-title">
+          <p class="pro">Add product</p>
+          <div class="underline"></div>
+       
+      </div>
+      <div class="add-product-div">
+        <p id="error-message"></p>
+        <form method="post" action="#" class="add-product-form">
+          <label for="product-name" class="product-name">Product Name</label><br />
+          <input
+            type="text"
+            oninput="hideError()"
+            id="product-name"
+            name="product-name"
+            required
+          /><br />
+          <label for="email" class="inventory">Inventory</label><br />
+          <input
+            type="text"
+            id="inventory"
+            oninput="hideError()"
+            name="inventory"
+            required
+          /><br />
+          <label for="price" class="price">Price</label><br />
+          <input
+            type="text"
+            id="price"
+            oninput="hideError()"
+            name="price"
+            required
+          /><br />
+          <label for="min-stock" class="min-stock"
+            >Minimun Stock</label
+          ><br />
+          <input
+            type="text"
+            id="min-stock"
+            oninput="hideError()"
+            name="min-stock"
+            required
+          /><br />
+          <label for="category" class="category">Category</label><br />
+          <input
+            type="text"
+            id="category"
+            oninput="hideError()"
+            name="category"
+            required
+          /><br />
+        </form>
+        <a href="#" onclick="addProduct()" id="add-product-btn">Add Product</a>
+      </div>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close"
+                ><img
+                  src="../resources/close-x.svg"
+                  alt="close"
+                  onclick="closeModal()"
+                  id="close-x"
+              /></span>
+              <img
+                id="check-mark"
+                src="../resources/check-mark-button.svg"
+                alt="check-mark"
+              />
+              <p class="success-mess">Product added successfully</p>
+              <p class="user-det">New product details</p>
+              <div class="underline-user-text"></div>
+              <p class="prod-name"></p>
+              <p class="prod-inv">Inventory: <span class="s-inv"></span></p>
+              <p class="prod-price">Price: <span class="s-ks">Kshs.</span> <span class="s-price"></span></p>
+              <p class="prod-min-stock">Minimun Stock: <span class="s-min-stock"></span></p>
+              <a class="go-to-prod" onclick="goToproducts()" href="#"
+                >Go to products</a
+              >
+            </div>
+          </div>
+    </div>
+    <script src="../js/add-product.js"></script>
+  </body>
+</html>

@@ -285,6 +285,141 @@ input[type='text'] {
   margin-top: 6%;
   text-transform: capitalize;
 }
+/* ------Modal------- */
+.modal {
+  width: 30%;
+  height: 50%;
+  margin-left: auto;
+  left: 44.5%;
+  right: auto;
+  top: 20%;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  position: absolute;
+}
+
+#close-x {
+  width: 40px;
+  height: 40px;
+  margin-top: 14px;
+  margin-left: 90%;
+}
+#close-x:hover {
+  opacity: 40%;
+}
+
+.success-mess {
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3bb49d;
+}
+
+.underline-user-text {
+  width: 30px;
+  height: 0;
+  border: solid 3px #24c6dc;
+  margin-top: 0;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  margin-left: 9%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.update,
+.delete {
+  width: 200px;
+  height: 50px;
+  padding-top: 13px;
+  border-radius: 40px;
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  display: block;
+}
+.delete {
+  float: right;
+  margin-right: 9%;
+  background-color: #b43b52;
+}
+.delete:hover {
+  color: white;
+  background-color: #b43b51b6;
+}
+.update {
+  float: left;
+  margin-left: 9%;
+  background-color: #24c6dc;
+}
+.update:hover {
+  color: white;
+  background-color: #24c7dca8;
+}
+.user-det {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 18px;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  width: 70%;
+  margin-left: 9%;
+}
+.prod-name {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #24c6dc;
+  margin-left: 9%;
+  width: 70%;
+}
+
+.prod-inv,
+.prod-price,
+.prod-min-stock {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  margin-left: 9%;
+  width: 70%;
+}
+.s-inv,
+.s-price,
+.s-min-stock,
+.s-ks {
+  color: #24c6dc;
+}
 
 /* --------------------------
 .........Mobile Nav----------
@@ -361,6 +496,9 @@ header {
     height: 270px;
     margin: 28px;
   }
+  .modal {
+    width: 35%;
+  }
 }
 
 /* -----------------------------------------
@@ -383,6 +521,13 @@ header {
     margin-top: 20px;
     margin-left: 60%;
   }
+  .modal {
+    left: 35%;
+    width: 50%;
+  }
+  #close-x {
+    margin-left: 85%;
+  }
 }
 
 /* -----------------------------------------
@@ -399,13 +544,20 @@ header {
   .product-details {
     margin-left: 25%;
   }
+  .modal {
+    width: 55%;
+  }
+  .update,
+  .delete {
+    width: 150px;
+  }
 }
 
 /* -----------------------------------------
   ------------MOBILE DEVICES---------------
   ----------------------------------------- */
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 480px) {
   header {
     display: block;
     background-color: #ffffff;
@@ -469,15 +621,34 @@ header {
   .cost {
     font-size: 20px;
   }
+  .modal {
+    left: 8%;
+    width: 85%;
+  }
+
+  #close-x {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 80%;
+  }
+  .update,
+  .delete {
+    width: 120px;
+  }
 }
 
 /*----SMALL MOBILE DEVICES------*/
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 320px) {
   #logo-mobile {
     height: 30px;
   }
   .products-title {
     margin-left: 10%;
+  }
+  .update,
+  .delete {
+    width: 100px;
   }
 }

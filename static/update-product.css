@@ -56,13 +56,11 @@ a:active {
   color: #24c6dc;
 }
 
-#user-photo-emp {
+#user-photo {
   width: 63%;
   height: 63%;
   margin-bottom: 2%;
   margin-top: 15%;
-  margin-right: auto;
-  margin-left: auto;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #24c6dc;
@@ -138,13 +136,40 @@ ul {
   color: #24c6dc;
   text-transform: capitalize;
 }
-.employees-title {
+/* ------------------------
+  -----------Main------------
+  ----------------------------- */
+
+.products-title {
   margin: 3% auto 2% 7%;
 }
-
-.emp {
-  width: 224px;
+.back-prod {
+  width: 178px;
   height: 43px;
+  margin-top: 3%;
+  border-radius: 27px;
+  border: solid 1px #b43b8a;
+  text-align: center;
+  padding-top: 6px;
+}
+#back-btn {
+  width: 72px;
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 23px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: #b43b8a;
+}
+#back-btn:hover {
+  color: #b43b8aaf;
+}
+.pro {
+  width: 424px;
+  height: 23px;
   font-family: Montserrat;
   font-size: 35px;
   font-weight: bold;
@@ -153,14 +178,13 @@ ul {
   letter-spacing: normal;
   text-align: left;
   color: #6f6f6f;
-  white-space: nowrap;
 }
 
-.underline-text {
+.underline {
   width: 70px;
   height: 0;
   border: solid 2px #24c6dc;
-  margin-top: 2px;
+  margin-top: 24px;
   margin-bottom: 22px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -168,26 +192,23 @@ ul {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-
-.add-employee-div {
+.add-product-div {
   width: 40%;
   height: 66%;
   border-radius: 10px;
   box-shadow: rgba(159, 216, 216, 0.24);
   background-color: #ffffff;
   backdrop-filter: blur(30px);
-  margin: 5% auto 10% auto;
+  margin: 3% auto 10% auto;
   overflow: auto;
   position: relative;
 }
-.add-employee-form {
+.add-product-form {
   margin: 13% auto 5% auto;
   display: table;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='email'] {
+input[type='text'] {
   width: 100%;
   border: none;
   border-bottom: 1px solid #6f6f6f;
@@ -197,20 +218,15 @@ input[type='email'] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
-input[type='password']:focus,
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='email']:hover,
-input[type='password']:hover,
 input[type='text']:hover {
   border-bottom-color: #24c6dc;
 }
 
-.confirm-password,
-.username,
-.password,
-.email,
-.role {
+.product-name,
+.inventory,
+.price,
+.min-stock,
+.category {
   height: 19px;
   font-family: Montserrat;
   font-size: 16px;
@@ -222,7 +238,7 @@ input[type='text']:hover {
   color: #6f6f6f;
 }
 
-#add-employee-btn {
+#add-product-btn {
   background-color: #24c6dc;
   border: none;
   color: white;
@@ -245,7 +261,7 @@ input[type='text']:hover {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-#add-employee-btn:hover {
+#add-product-btn:hover {
   background-color: #24c7dc98;
 }
 #error-message {
@@ -256,7 +272,7 @@ input[type='text']:hover {
   color: white;
   padding: 4px 7px;
   width: 60%;
-  margin: 10px auto 10px auto;
+  margin: 15px auto 10px auto;
   text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -329,7 +345,7 @@ input[type='text']:hover {
   -o-border-radius: 15px;
 }
 
-.go-to-emp {
+.go-to-prod {
   width: 250px;
   height: 50px;
   padding-top: 13px;
@@ -344,7 +360,7 @@ input[type='text']:hover {
   margin-right: auto;
   margin-left: auto;
 }
-.go-to-emp:hover {
+.go-to-prod:hover {
   color: white;
   background-color: #b43b8abb;
 }
@@ -362,9 +378,23 @@ input[type='text']:hover {
   width: 70%;
   margin-left: 9%;
 }
-.p-usn,
-.p-rol,
-.p-em {
+.prod-name {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #24c6dc;
+  margin-left: 9%;
+  width: 70%;
+}
+
+.prod-inv,
+.prod-price,
+.prod-min-stock {
   height: 34px;
   font-family: Montserrat;
   font-size: 18px;
@@ -377,30 +407,24 @@ input[type='text']:hover {
   margin-left: 9%;
   width: 70%;
 }
-.s-usn,
-.s-rol,
-.s-em {
+.s-inv,
+.s-price,
+.s-min-stock,
+.s-ks {
   color: #24c6dc;
 }
-#user-image,
-#mobi-photo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  display: block;
-  margin: 10% auto;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
+
+/* --------------------------
+  .........Mobile Nav----------
+  ............................... */
+
 header {
   display: none;
   background: white;
 }
 
 /* The sidepanel menu */
+
 .sidepanel {
   height: 100%;
   width: 0;
@@ -454,8 +478,8 @@ header {
 }
 
 /* ----------------------------------
---------Big Laptop-------------------
--------------------------------------- */
+    --------Big Laptop-------------------
+    -------------------------------------- */
 @media only screen and (max-width: 1440px) {
   .logo img {
     width: 100%;
@@ -463,12 +487,9 @@ header {
 }
 
 /* -----------------------------------------
-------------Small laptops---------------
------------------------------------------ */
+      ------------Small laptops---------------
+      ----------------------------------------- */
 @media only screen and (max-width: 1200px) {
-  .welcome-text {
-    margin-left: 20px;
-  }
   .logo img {
     width: 100%;
   }
@@ -481,9 +502,7 @@ header {
     padding-left: 2px;
     width: 80%;
   }
-  #add-employee,
-  .attendants,
-  .admin {
+  #add-product {
     margin-top: 20px;
   }
   .add-employee-div {
@@ -496,20 +515,24 @@ header {
   #close-x {
     margin-left: 85%;
   }
+  .add-product-div {
+    width: 70%;
+  }
 }
+
 /* -----------------------------------------
-    ------------Tablets---------------
-    ----------------------------------------- */
+      ------------Tablets---------------
+      ----------------------------------------- */
 
 @media only screen and (max-width: 768px) {
-  .add-employees-div {
+  .add-product-div {
     width: 80%;
   }
 }
 
 /* -----------------------------------------
-------------MOBILE DEVICES---------------
------------------------------------------ */
+      ------------MOBILE DEVICES---------------
+      ----------------------------------------- */
 
 @media only screen and (max-width: 480px) {
   header {
@@ -539,6 +562,16 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 5% auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
   }
 
   .mobi-logo {
@@ -549,27 +582,18 @@ header {
   #logo-mobile {
     height: 35px;
   }
-  .add-employee-div {
+  .add-product-div {
     width: 80%;
+  }
+  .go-to-prod {
+    width: 85%;
+  }
+  #add-product-btn {
+    width: 50%;
   }
   .modal {
-    left: 9%;
-    width: 80%;
-  }
-}
-
-/*----SMALL MOBILE DEVICES------*/
-
-@media only screen and (max-width: 320px) {
-  #logo-mobile {
-    height: 30px;
-  }
-  .add-employee-div {
-    width: 80%;
-  }
-  .modal {
-    left: 10%;
-    width: 80%;
+    left: 8%;
+    width: 85%;
   }
 
   #check-mark {
@@ -584,10 +608,41 @@ header {
     margin-top: 9px;
     margin-left: 80%;
   }
-  .go-to-emp {
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  #logo-mobile {
+    height: 30px;
+  }
+  .add-product-div {
+    width: 80%;
+  }
+  .modal {
+    left: 8%;
+    width: 85%;
+  }
+
+  #check-mark {
+    margin-top: 1px;
+    width: 70px;
+    height: 70px;
+  }
+
+  #close-x {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 80%;
+  }
+  .go-to-prod {
     width: 75%;
   }
-  #add-employee-btn {
+  #add-product-btn {
     width: 50%;
+  }
+  .user-det {
+    font-size: 18px;
   }
 }

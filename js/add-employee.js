@@ -164,3 +164,7 @@ const closeModal = function () {
 const goToEmployees = function () {
   window.location.href = '../UI/employees.html';
 };
+
+const products = () => {
+  window.location.href = '../UI/products.html';
+};
