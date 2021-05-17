@@ -85,6 +85,32 @@
         />
         <div class="product-details"></div>
       </div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close"
+            ><img
+              src="../resources/close-x.svg"
+              alt="close"
+              onclick="closeModal()"
+              id="close-x"
+          /></span>
+          <p class="user-det">Product Details</p>
+          <div class="underline-user-text"></div>
+          <p class="prod-name">Sugar</p>
+          <p class="prod-inv">Inventory: <span class="s-inv">20</span></p>
+          <p class="prod-price">
+            Price: <span class="s-ks">Kshs.</span>
+            <span class="s-price">20</span>
+          </p>
+          <p class="prod-min-stock">
+            Minimun Stock: <span class="s-min-stock">5</span>
+          </p>
+          <a class="update" onclick="prodUpdate()" href="#">Update</a>
+          <a class="delete" onclick="prodDelete()" href="#">Delete</a>
+        </div>
+      </div>
     </div>
     <script src="../js/products.js"></script>
   </body>
