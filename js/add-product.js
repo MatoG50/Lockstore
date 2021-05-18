@@ -44,6 +44,9 @@ const dashboard = () => {
 const products = () => {
   window.location.href = '../UI/products.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 /* width of the sidebar*/
 function openNav() {

@@ -33,7 +33,7 @@
         <a onclick="dashboard()" href="#">Dashboard</a>
         <a onclick="employees()" href="#">Employees</a>
         <a class="pro-mobi-col" onclick="products()" href="#">Products</a>
-        <a href="#">Sales</a>
+        <a href="#" onclick="sales()">Sales</a>
         <a onclick="logout()" href="#">Logout</a>
       </div>
 
@@ -68,85 +68,91 @@
         <div class="products-title">
           <p class="pro">Update product</p>
           <div class="underline"></div>
-          <div class="back-prod"><a onclick="back()" id="back-btn" href="#">Back</a></div>
-       
-      </div>
-      <div class="add-product-div">
-        <p id="error-message"></p>
-        <form method="post" action="#" class="add-product-form">
-          <label for="product-name" class="product-name">Product Name</label><br />
-          <input
-            type="text"
-            oninput="hideError()"
-            id="product-name"
-            name="product-name"
-            required
-          /><br />
-          <label for="email" class="inventory">Inventory</label><br />
-          <input
-            type="text"
-            id="inventory"
-            oninput="hideError()"
-            name="inventory"
-            required
-          /><br />
-          <label for="price" class="price">Price</label><br />
-          <input
-            type="text"
-            id="price"
-            oninput="hideError()"
-            name="price"
-            required
-          /><br />
-          <label for="min-stock" class="min-stock"
-            >Minimun Stock</label
-          ><br />
-          <input
-            type="text"
-            id="min-stock"
-            oninput="hideError()"
-            name="min-stock"
-            required
-          /><br />
-          <label for="category" class="category">Category</label><br />
-          <input
-            type="text"
-            id="category"
-            oninput="hideError()"
-            name="category"
-            required
-          /><br />
-        </form>
-        <a href="#" onclick="UpdateProduct()" id="add-product-btn">Update</a>
-      </div>
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close"
-                ><img
-                  src="../resources/close-x.svg"
-                  alt="close"
-                  onclick="closeModal()"
-                  id="close-x"
-              /></span>
-              <img
-                id="check-mark"
-                src="../resources/check-mark-button.svg"
-                alt="check-mark"
-              />
-              <p class="success-mess">Product updated successfully</p>
-              <p class="user-det">New Product Details</p>
-              <div class="underline-user-text"></div>
-              <p class="prod-name"></p>
-              <p class="prod-inv">Inventory: <span class="s-inv"></span></p>
-              <p class="prod-price">Price: <span class="s-ks">Kshs.</span> <span class="s-price"></span></p>
-              <p class="prod-min-stock">Minimun Stock: <span class="s-min-stock"></span></p>
-              <a class="go-to-prod" onclick="goToproducts()" href="#"
-                >Go to products</a
-              >
-            </div>
+          <div class="back-prod">
+            <a onclick="back()" id="back-btn" href="#">Back</a>
           </div>
+        </div>
+        <div class="add-product-div">
+          <p id="error-message"></p>
+          <form method="post" action="#" class="add-product-form">
+            <label for="product-name" class="product-name">Product Name</label
+            ><br />
+            <input
+              type="text"
+              oninput="hideError()"
+              id="product-name"
+              name="product-name"
+              required
+            /><br />
+            <label for="email" class="inventory">Inventory</label><br />
+            <input
+              type="text"
+              id="inventory"
+              oninput="hideError()"
+              name="inventory"
+              required
+            /><br />
+            <label for="price" class="price">Price</label><br />
+            <input
+              type="text"
+              id="price"
+              oninput="hideError()"
+              name="price"
+              required
+            /><br />
+            <label for="min-stock" class="min-stock">Minimun Stock</label><br />
+            <input
+              type="text"
+              id="min-stock"
+              oninput="hideError()"
+              name="min-stock"
+              required
+            /><br />
+            <label for="category" class="category">Category</label><br />
+            <input
+              type="text"
+              id="category"
+              oninput="hideError()"
+              name="category"
+              required
+            /><br />
+          </form>
+          <a href="#" onclick="UpdateProduct()" id="add-product-btn">Update</a>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close"
+              ><img
+                src="../resources/close-x.svg"
+                alt="close"
+                onclick="closeModal()"
+                id="close-x"
+            /></span>
+            <img
+              id="check-mark"
+              src="../resources/check-mark-button.svg"
+              alt="check-mark"
+            />
+            <p class="success-mess">Product updated successfully</p>
+            <p class="user-det">New Product Details</p>
+            <div class="underline-user-text"></div>
+            <p class="prod-name"></p>
+            <p class="prod-inv">Inventory: <span class="s-inv"></span></p>
+            <p class="prod-price">
+              Price: <span class="s-ks">Kshs.</span>
+              <span class="s-price"></span>
+            </p>
+            <p class="prod-min-stock">
+              Minimun Stock: <span class="s-min-stock"></span>
+            </p>
+            <a class="go-to-prod" onclick="goToproducts()" href="#"
+              >Go to products</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../js/update-product.js"></script>
   </body>

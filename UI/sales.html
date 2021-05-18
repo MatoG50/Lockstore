@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../static/sales.css" rel="stylesheet" />
+    <title>Sales</title>
+  </head>
+  <body>
+    <header class="mobi-header">
+      <div class="mobi-logo">
+        <img
+          src="../resources/LockStore Logo.svg"
+          id="logo-mobile"
+          alt="LockStore Logo"
+        />
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="mobi-photo"></div>
+        <div class="mobi-name">
+          <p class="mobi-user-name"></p>
+          <p class="mobi-user-role"></p>
+        </div>
+        <a onclick="dashboard()" href="#">Dashboard</a>
+        <a onclick="employees()" href="#">Employees</a>
+        <a onclick="products()" href="#">Products</a>
+        <a class="mobi-sales-col" href="#">Sales</a>
+        <a onclick="logout()" href="#">Logout</a>
+      </div>
+
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </header>
+    <div class="container">
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="../resources/LockStore Logo.svg" alt="LockStore Logo" />
+        </div>
+        <div class="photo"></div>
+        <div class="name">
+          <p class="user-name"></p>
+          <p class="user-role"></p>
+        </div>
+        <div class="nav">
+          <ul class="main-nav">
+            <li><a onclick="dashboard()" href="#">Dashboard</a></li>
+            <li>
+              <a onclick="employees()" href="#">Employees</a>
+            </li>
+            <li>
+              <a onclick="products()" href="#">Products</a>
+            </li>
+            <li><a class="sales-col" onclick="sales()" href="#">Sales</a></li>
+            <li><a onclick="logout()" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="date"></div>
+        <div class="products-title">
+          <p class="pro">Sales</p>
+          <div class="underline"></div>
+        </div>
+        <div class="sales-table">
+            <table id="table">
+                <tr class="table-header">
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sold By</th>
+                </tr>
+            </table>
+        </div>
+   
+    </div>
+    <script src="../js/sales.js"></script>
+  </body>
+</html>

@@ -53,6 +53,9 @@ const dashboard = () => {
 const addEmployee = () => {
   window.location.href = '../UI/add-employee.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 const logout = () => {
   localStorage.removeItem('token');

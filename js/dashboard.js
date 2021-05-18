@@ -110,6 +110,9 @@ const dashboard = () => {
 const products = () => {
   window.location.href = '../UI/products.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 document.querySelector('.dash-col').style.color = '#0984e3';
 document.querySelector('.mobi-col').style.color = '#0984e3';

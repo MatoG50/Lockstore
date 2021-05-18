@@ -94,6 +94,9 @@ const products = () => {
 const addEmployee = () => {
   window.location.href = '../UI/add-employee.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 document.querySelector('.emp-col').style.color = '#0984e3';
 document.querySelector('.mobi-col').style.color = '#0984e3';

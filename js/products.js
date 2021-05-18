@@ -48,6 +48,9 @@ const products = () => {
 const addProduct = () => {
   window.location.href = '../UI/add-product.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 /* width of the sidebar*/
 function openNav() {
