@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link href="../static/dashboard.css" rel="stylesheet" />
-    <title>Lockstore</title>
+    <link href="../static/sales.css" rel="stylesheet" />
+    <title>Sales</title>
   </head>
   <body>
     <header class="mobi-header">
@@ -30,10 +30,10 @@
           <p class="mobi-user-name"></p>
           <p class="mobi-user-role"></p>
         </div>
-        <a class="mobi-col" onclick="dashboard()" href="#">Dashboard</a>
+        <a onclick="dashboard()" href="#">Dashboard</a>
         <a onclick="employees()" href="#">Employees</a>
         <a onclick="products()" href="#">Products</a>
-        <a onclick="sales()" href="#">Sales</a>
+        <a class="mobi-sales-col" href="#">Sales</a>
         <a onclick="logout()" href="#">Logout</a>
       </div>
 
@@ -51,44 +51,36 @@
         </div>
         <div class="nav">
           <ul class="main-nav">
+            <li><a onclick="dashboard()" href="#">Dashboard</a></li>
             <li>
-              <a class="dash-col" onclick="dashboard()" href="#">Dashboard</a>
+              <a onclick="employees()" href="#">Employees</a>
             </li>
-            <li><a onclick="employees()" href="#">Employees</a></li>
-            <li><a onclick="products()" href="#">Products</a></li>
-            <li><a onclick="sales()" href="#">Sales</a></li>
+            <li>
+              <a onclick="products()" href="#">Products</a>
+            </li>
+            <li><a class="sales-col" onclick="sales()" href="#">Sales</a></li>
             <li><a onclick="logout()" href="#">Logout</a></li>
           </ul>
         </div>
       </div>
       <div class="main">
         <div class="date"></div>
-        <div class="welcome-message">
-          <div class="welcome-text">
-            <p class="p-main">
-              WELCOME TO YOUR DASHBOARD, <span class="first-name"></span>
-            </p>
-            <p class="p-sub">
-              View you company's performance through the cards below.
-            </p>
-          </div>
+        <div class="products-title">
+          <p class="pro">Sales</p>
+          <div class="underline"></div>
         </div>
-        <div class="cards">
-          <div class="card">
-            <p class="card-name">Total Products</p>
-            <p class="card-number" id="total-products"></p>
-          </div>
-          <div class="card">
-            <p class="card-name">Total employees</p>
-            <p class="card-number" id="total-employees"></p>
-          </div>
-          <div class="card">
-            <p class="card-name">Sales Performance</p>
-            <p class="card-number" id="sales-performance"></p>
-          </div>
+        <div class="sales-table">
+            <table id="table">
+                <tr class="table-header">
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sold By</th>
+                </tr>
+            </table>
         </div>
-      </div>
+   
     </div>
-    <script src="../js/dashboard.js"></script>
+    <script src="../js/sales.js"></script>
   </body>
 </html>

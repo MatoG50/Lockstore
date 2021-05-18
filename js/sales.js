@@ -45,9 +45,6 @@ const dashboard = () => {
 const products = () => {
   window.location.href = '../UI/products.html';
 };
-const addProduct = () => {
-  window.location.href = '../UI/add-product.html';
-};
 const sales = () => {
   window.location.href = '../UI/sales.html';
 };
@@ -61,18 +58,15 @@ function closeNav() {
   document.getElementById('mySidepanel').style.width = '0';
 }
 
-document.querySelector('.pro-col').style.color = '#0984e3';
-document.querySelector('.pro-mobi-col').style.color = '#0984e3';
+document.querySelector('.sales-col').style.color = '#0984e3';
+document.querySelector('.mobi-sales-col').style.color = '#0984e3';
 
-// Get products
-const productsUrl = 'https://storemanagerapi2.herokuapp.com/api/v2/products';
-const totalProducts = document.querySelector('.total-products');
-const productname = document.querySelector('.product-name');
-const itemsNumber = document.querySelector('.items-no');
-const cost = document.querySelector('.k-shs');
-const productsContainer = document.querySelector('.product-details');
+// Get Sales
 
-fetch(productsUrl, {
+const salesUrl = 'https://storemanagerapi2.herokuapp.com/api/v2/sales';
+const tableContainer = document.getElementById('table');
+
+fetch(salesUrl, {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
@@ -82,25 +76,14 @@ fetch(productsUrl, {
   .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
-    totalProducts.innerHTML = data.Products.length;
-    data.Products.forEach(function (prod) {
-      const html = `
-        <div class="products-card">
-          <img
-            id="product-image"
-            src="../resources/products.svg"
-            alt="products"
-          />
-          <p class="product-name">${prod.name}</p>
-          <p class="inventory">
-            <span class="items-no">${prod.inventory}</span> items
-          </p>
-          <p class="cost">
-            Kshs. <span class="k-shs">${prod.price}</span>
-          </p>
-        </div>
-      `;
-      productsContainer.insertAdjacentHTML('beforeend', html);
+    data.Sales.forEach(sale => {
+      const rowHtml = `    <tr class="table-rows">
+        <td>${sale.product_name}</td>
+        <td>${sale.total_price}</td>
+        <td>${sale.quantity}</td>
+        <td>${sale.attendant_name}</td>
+    </tr>`;
+      tableContainer.insertAdjacentHTML('beforeend', rowHtml);
     });
   })
   .catch(error => {

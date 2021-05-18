@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  text-rendering: optimizeLegibility;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.nav-bar {
+  grid-column: 1 / 2;
+  background: white;
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+}
+
+.main {
+  grid-column: 2 / 2;
+  background-color: #f0f0f0;
+  overflow: auto;
+}
+.main-nav {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.main-nav li {
+  text-align: left;
+}
+
+li {
+  margin-bottom: 20px;
+  height: 3%;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+}
+a {
+  color: #010101;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #24c6dc;
+}
+
+#user-photo {
+  width: 63%;
+  height: 63%;
+  margin-bottom: 2%;
+  margin-top: 15%;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #24c6dc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.date {
+  float: right;
+  width: 25%;
+  height: 1%;
+  margin: 1% 0 5%;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: #24c6dc;
+}
+
+.logo,
+.mobi-logo {
+  height: 37px;
+  margin: 2px 50px 89px 12px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 50;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  color: #24c6dc;
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+
+.user-name {
+  height: 3%;
+  font-family: Montserrat;
+  margin: 18px 28px 16px 11px;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  color: #101010;
+  text-align: center;
+  text-transform: capitalize;
+}
+.first-name {
+  text-transform: uppercase;
+}
+
+.user-role,
+.mobi-user-role,
+.mobi-user-name {
+  height: 3%;
+  margin-top: 26px;
+  margin-bottom: 36px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #24c6dc;
+  text-transform: capitalize;
+}
+/* ------------------------
+    -----------Main------------
+    ----------------------------- */
+
+.products-title {
+  margin: 3% auto 2% 7%;
+}
+.pro {
+  width: 424px;
+  height: 23px;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+}
+.underline {
+  width: 50px;
+  height: 0;
+  border: solid 2px #24c6dc;
+  margin-top: 24px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.sales-table {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  width: 80%;
+}
+#table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.table-header th {
+  height: 34px;
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #24c6dc;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.table-rows {
+  height: 48px;
+  box-shadow: 0 3px 6px 0 rgba(36, 198, 220, 0.15);
+  background-color: #ffffff;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.table-rows td {
+  height: 30px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6f6f6f;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 25px 0 0 25px;
+  -webkit-border-radius: 25px 0 0 25px;
+  -moz-border-radius: 25px 0 0 25px;
+  -ms-border-radius: 25px 0 0 25px;
+  -o-border-radius: 25px 0 0 25px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0 25px 25px 0;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  -ms-border-radius: 0 25px 25px 0;
+  -o-border-radius: 0 25px 25px 0;
+}
+/* --------------------------
+  .........Mobile Nav----------
+  ............................... */
+
+header {
+  display: none;
+  background: white;
+}
+
+/* The sidepanel menu */
+
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #24c6dc;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #24c6dc;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* ----------------------------------
+      --------Big Laptop-------------------
+      -------------------------------------- */
+@media only screen and (max-width: 1440px) {
+  .logo img {
+    width: 100%;
+  }
+  .sales-table {
+    width: 88%;
+  }
+}
+
+/* -----------------------------------------
+        ------------Small laptops---------------
+        ----------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .logo img {
+    width: 100%;
+  }
+  .user-name,
+  .user-role,
+  li {
+    font-size: 20px;
+  }
+  .main-nav {
+    padding-left: 2px;
+    width: 80%;
+  }
+  .sales-table {
+    width: 85%;
+  }
+  .table-header th {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+  }
+  .table-rows td {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 15px;
+  }
+}
+
+/* -----------------------------------------
+        ------------Tablets---------------
+        ----------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+  .sales-table {
+    width: 88%;
+  }
+  .table-header th {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .table-rows td {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
+
+/* -----------------------------------------
+        ------------MOBILE DEVICES---------------
+        ----------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  header {
+    display: block;
+    background-color: #ffffff;
+  }
+  .container {
+    overflow: auto;
+    grid-template-columns: 0 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  .nav-bar {
+    display: none;
+  }
+  .date {
+    display: none;
+  }
+  .mobi-user-name,
+  .mobi-user-role {
+    text-align: left;
+    font-weight: normal;
+    margin: 0 auto;
+    padding-left: 13%;
+  }
+  #mobi-photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 5% auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .mobi-logo {
+    height: 12px;
+    font-size: 15px;
+    float: right;
+  }
+  #logo-mobile {
+    height: 35px;
+  }
+  .sales-table {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .table-header th {
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 15px;
+  }
+  .table-rows td {
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 12px;
+  }
+}
+
+/*----SMALL MOBILE DEVICES------*/
+
+@media only screen and (max-width: 320px) {
+  #logo-mobile {
+    height: 30px;
+  }
+  .sales-table {
+    width: 98%;
+  }
+  .table-header th {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 15px;
+  }
+  .table-rows td {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 12px;
+  }
+}

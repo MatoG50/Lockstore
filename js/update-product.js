@@ -48,6 +48,9 @@ const products = () => {
 const back = () => {
   window.location.href = '../UI/products.html';
 };
+const sales = () => {
+  window.location.href = '../UI/sales.html';
+};
 
 /* width of the sidebar*/
 function openNav() {
@@ -60,3 +63,11 @@ function closeNav() {
 
 document.querySelector('.pro-col').style.color = '#0984e3';
 document.querySelector('.pro-mobi-col').style.color = '#0984e3';
+
+// Logout
+const logout = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('role');
+  localStorage.removeItem('username');
+  window.location.href = '../index.html';
+};

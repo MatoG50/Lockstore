@@ -6,7 +6,6 @@
 
 .container {
   text-rendering: optimizeLegibility;
-  /* padding: 63px 464px 112px; */
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -18,13 +17,11 @@
 .lockstore-logo {
   width: 285px;
   height: 44.9px;
-  /* margin: 0 76px 82.1px 77px; */
   margin-bottom: 80px;
   margin-top: 40px;
   object-fit: contain;
 }
 .log-in {
-  /* margin: 82.1px 0 0; */
   padding: 20px 77px 31px 72.5px;
   border-radius: 10px;
   -webkit-backdrop-filter: blur(30px);
@@ -35,7 +32,6 @@
 }
 
 .log-in-text {
-  /* margin: 0 auto; */
   margin-bottom: 39px;
   margin-top: 20px;
 }
